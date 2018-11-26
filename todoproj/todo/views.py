@@ -7,4 +7,4 @@ from django.http import HttpResponse
 # Create your views here.
 
 def todoview(request):
-    return HttpResponse('hello, this is todoview')
+    return render(request,'todo.html')
