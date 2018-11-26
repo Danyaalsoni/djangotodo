@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from todo.views import addtodo, deletetodo
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^todo/', include('todo.urls')),
+    url(r'^addtodo/', addtodo),
+    url(r'^deletetodo/(?P<todo_id>[0-9]+)/', deletetodo),
 ]
