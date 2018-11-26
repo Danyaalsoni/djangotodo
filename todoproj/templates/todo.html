@@ -7,7 +7,7 @@
   {% for todo_item in all_items %}
   <li>{{todo_item.content}}
     <form action="/deletetodo/{{todo_item.id}}/"
-      style="display:inline;"
+      style="display: inline;"
       method="post"> {% csrf_token %}
       <input type="submit" value="Delete">
     </form>
